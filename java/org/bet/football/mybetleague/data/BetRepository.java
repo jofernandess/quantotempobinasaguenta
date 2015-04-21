@@ -20,7 +20,7 @@ import org.bet.football.mybetleague.model.User;
  */
 
 @ApplicationScoped
-public class UserRepository {
+public class BetRepository {
 
     @Inject
     private EntityManager em;

@@ -19,24 +19,24 @@
 		in META-INF/persistence.xml -->
 	<datasource jndi-name="java:jboss/datasources/mybetleague"
 		pool-name="mybetleague" enabled="true" use-java-context="true">
-		<connection-url>jdbc:mysql://localhost:3306/mybetleague</connection-url>
+		<connection-url>jdbc:mysql://127.2.30.130:3306/quantotempobinasaguenta</connection-url>
 		<driver>mysql</driver>
 		<security>
-			<user-name>root</user-name>
-			<password>admin</password>
+			<user-name>adminsFfhnxw</user-name>
+			<password>23cdqU3Zr5Kc</password>
 		</security>
 		<statement>
 			<prepared-statement-cache-size>100</prepared-statement-cache-size>
 		</statement>
 	</datasource>
-<!-- 	<datasource jndi-name="java:jboss/datasources/mybetleagueDS" -->
-<!-- 		pool-name="mybetleagueDS" enabled="true" use-java-context="true"> -->
-<!-- 		<connection-url>jdbc:h2:mem:mybetleagueDS;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1</connection-url> -->
-<!-- 		<driver>h2</driver> -->
-<!-- 		<security> -->
-<!-- 			<user-name>sa</user-name> -->
-<!-- 			<password>sa</password> -->
-<!-- 		</security> -->
-<!-- 	</datasource> -->
+	<!-- <datasource jndi-name="java:jboss/datasources/mybetleagueDS" -->
+	<!-- pool-name="mybetleagueDS" enabled="true" use-java-context="true"> -->
+	<!-- <connection-url>jdbc:h2:mem:mybetleagueDS;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1</connection-url> -->
+	<!-- <driver>h2</driver> -->
+	<!-- <security> -->
+	<!-- <user-name>sa</user-name> -->
+	<!-- <password>sa</password> -->
+	<!-- </security> -->
+	<!-- </datasource> -->
 </datasources>
  

@@ -41,7 +41,7 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.bet.football.mybetleague.data.UserRepository;
+import org.bet.football.mybetleague.data.BetRepository;
 import org.bet.football.mybetleague.model.Role;
 import org.bet.football.mybetleague.model.User;
 import org.bet.football.mybetleague.service.user.UserManagement;
@@ -68,7 +68,7 @@ public class UserService {
 	private Validator validator;
 
 	@Inject
-	private UserRepository repository;
+	private BetRepository repository;
 
 	@Inject
 	UserManagement userManagement;
