@@ -69,9 +69,24 @@
 					<div class="ui-content">
 						<div id="clock" class="clock"></div>
 					</div>
-					<input type="button" id="start" value="start" onClick="action();"
-						class="button" />
+
 				</div>
+				<div data-role="footer" data-position="fixed">
+					        
+					<div data-role="navbar">
+						            
+						<ul>
+							<li><a href="#home" data-icon="home" class="ui-btn-active"
+								data-transition="slide">Countdown</a></li>
+							<li><a href="#bet" data-icon="star" data-transition="slide">Bets</a></li>
+							<li><a href="#list" data-icon="gear" data-transition="slide">List
+									of Bets</a></li>
+						</ul>
+						        
+					</div>
+					<!-- /navbar -->
+				</div>
+				<!-- /footer -->
 			</article>
 			<article id="bet" data-role="page" data-title="Bet">
 				<!-- Header -->
@@ -111,19 +126,48 @@
 						</fieldset>
 					</div>
 				</div>
-			</article>
-			<!-- Footer -->
-			<div data-role="footer" data-tap-toggle="false" data-position="fixed"
-				data-theme="a">
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#home">Countdown</a></li>
-						<li><a href="#bet">Bets</a></li>
-					</ul>
+				     
+				<div data-role="footer" data-position="fixed">
+					        
+					<div data-role="navbar">
+						            
+						<ul>
+							<li><a href="#home" data-icon="home" data-transition="slide">Countdown</a></li>
+							<li><a href="#bet" data-icon="star" class="ui-btn-active"
+								data-transition="slide">Bets</a></li>
+							<li><a href="#list" data-icon="gear" data-transition="slide">List
+									of Bets</a></li>
+						</ul>
+						        
+					</div>
+					<!-- /navbar -->
 				</div>
-				<!-- /navbar -->
-			</div>
-			<!-- /Footer -->
+				<!-- /footer -->
+			</article>
+			<article id="list" data-role="page" data-title="List">
+				<!-- Header -->
+				<div data-role="header" class="header">
+					<h3>Vê aqui todas as apostas</h3>
+				</div>
+				<!-- /Header -->
+				<div class="ui-content" role="main"></div>
+				<div data-role="footer" data-position="fixed">
+					        
+					<div data-role="navbar">
+						            
+						<ul>
+							<li><a href="#home" data-icon="home" data-transition="slide">Countdown</a></li>
+							<li><a href="#bet" data-icon="star" 
+								data-transition="slide">Bets</a></li>
+							<li><a href="#list" data-icon="gear" class="ui-btn-active" data-transition="slide">List
+									of Bets</a></li>
+						</ul>
+						        
+					</div>
+					<!-- /navbar -->
+				</div>
+				<!-- /footer -->
+			</article>
 		</section>
 	</div>
 
@@ -131,9 +175,7 @@
 	<script type="text/javascript">
 	
 	$(document).ready(function() {
-		//document.getElementsByClassName('ui-btn')[0].style.display = 'none';
-		document.getElementsByClassName('ui-btn')[0].style.display = 'none';
-       
+		
 		var clock;
 		var now = new Date().getTime();
 		var before =  new Date("April 16, 2015 09:00:00").getTime();		
@@ -142,8 +184,6 @@
 		    clockFace: 'DailyCounter'
 		  }); 
 	});
-	
-	
 	</script>
 </body>
 </html>
