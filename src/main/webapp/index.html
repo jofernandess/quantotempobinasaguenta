@@ -52,7 +52,7 @@
 <body>
 	<div id="container">
 		<section>
-			<article id="intro-art" data-role="page" data-title="Home">
+			<article id="home" data-role="page" data-title="Home">
 				<!-- Header -->
 				<div data-role="header" class="header">
 					<h3>Quanto tempo aguenta o Binas no próximo emprego?</h3>
@@ -61,33 +61,89 @@
 
 				<div class="ui-content" role="main">
 					<div class="wrap">
-						<img src="img/binassuperman.jpg" class="mobileicon" />
-						<div class="clock"></div>
+						<div class="container ui-content">
+							<img src="img/binassuperman.jpg" class="container mobileicon" />
+						</div>
+					</div>
+					<div class="ui-field-contain"></div>
+					<div class="ui-content">
+						<div id="clock" class="clock"></div>
+					</div>
+					<input type="button" id="start" value="start" onClick="action();"
+						class="button" />
+				</div>
+			</article>
+			<article id="bet" data-role="page" data-title="Bet">
+				<!-- Header -->
+				<div data-role="header" class="header">
+					<h3>Faz já a tua aposta!</h3>
+				</div>
+				<!-- /Header -->
+
+				<div class="ui-content" role="main">
+					<h2>Aposta minima: 2€</h2>
+
+					<div data-role="fieldcontain">
+						<label for="select-choice-1" class="select">Aposta:</label> <input
+							type="range" name="slider-1" id="slider-1" value="5" min="2"
+							max="20" />
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup" data-type="horizontal">
+							<legend>Data em que o Binas oficializa despedimento:</legend>
+
+							<label for="select-choice-month">Dia</label> <select
+								name="select-choice-month" id="select-choice-month">
+								<option>Dia</option>
+								<option value="1">1</option>
+								<!-- etc. -->
+							</select> <label for="select-choice-day">Day</label> <select
+								name="select-choice-day" id="select-choice-day">
+								<option>Day</option>
+								<option value="1">1</option>
+								<!-- etc. -->
+							</select> <label for="select-choice-year">Year</label> <select
+								name="select-choice-year" id="select-choice-year">
+								<option>Year</option>
+								<option value="2011">2011</option>
+								<!-- etc. -->
+							</select>
+						</fieldset>
 					</div>
 				</div>
 			</article>
-
 			<!-- Footer -->
 			<div data-role="footer" data-tap-toggle="false" data-position="fixed"
-				data-theme="a"></div>
+				data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home">Countdown</a></li>
+						<li><a href="#bet">Bets</a></li>
+					</ul>
+				</div>
+				<!-- /navbar -->
+			</div>
 			<!-- /Footer -->
 		</section>
 	</div>
 
 	<script src="js/flipclock.min.js"></script>
 	<script type="text/javascript">
-	var clock; 
+	
 	$(document).ready(function() {
-		  var date = new Date(),
-		      days = date.getDate()*60*60*24,
-		      hours = date.getHours()*60*60,
-		      minutes = date.getMinutes()*60,
-		      sec = date.getSeconds(),
-		      clock = $('.clock').FlipClock({
+		//document.getElementsByClassName('ui-btn')[0].style.display = 'none';
+		document.getElementsByClassName('ui-btn')[0].style.display = 'none';
+       
+		var clock;
+		var now = new Date().getTime();
+		var before =  new Date("April 16, 2015 09:00:00").getTime();		
+		var diff = now/1000 - before/1000;
+		      clock = $("#clock").FlipClock(diff,{
 		    clockFace: 'DailyCounter'
-		  });  
-		  clock.setTime(days+hours+minutes+sec);
-		});
+		  }); 
+	});
+	
+	
 	</script>
 </body>
 </html>
