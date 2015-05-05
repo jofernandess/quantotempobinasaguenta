@@ -5,3 +5,5 @@
 /.teeproject
 /.tern-project
 /SERVICES.md
+/.settings/
+/sql/
