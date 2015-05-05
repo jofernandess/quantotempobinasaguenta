@@ -1,189 +1,385 @@
 <!DOCTYPE html>
-<!--
-    JBoss, Home of Professional Open Source
-    Copyright 2014, Red Hat, Inc. and/or its affiliates, and individual
-    contributors by the @authors tag. See the copyright.txt in the
-    distribution for a full listing of individual contributors.
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-    http://www.apache.org/licenses/LICENSE-2.0
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
--->
 <html>
 <head>
 <title>Quanto tempo aguenta o Binas no próximo emprego?</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- Disable phone number detection on iOS.  -->
-<meta name="format-detection" content="telephone=no" />
-
-<!-- Set the tab, home page, shortcut icons -->
-<!-- <link rel="Shortcut Icon" href="img/"> -->
-<!-- <link rel="apple-touch-icon" href="img/"/> -->
-
-<!-- For minification, comment out this link -->
-<link rel="stylesheet" href="css/jquery.mobile-1.4.2.css" />
-<!-- For minification, uncomment out this file -->
-<!--<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css"/>-->
-
-<!-- For minification, comment out this link -->
-<link rel="stylesheet" href="css/screen.css" />
-<link rel="stylesheet" href="css/flipclock.css">
-
 <!-- Set viewport scaling and zoom features -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- For minification, comment out this file -->
-<script type="text/javascript" src="js/libs/jquery-2.0.3.js"></script>
-<!-- For minification, uncomment out this file -->
-<!--<script type="text/javascript" src="js/libs/jquery-2.0.3.min.js"></script>-->
+<!-- The styles -->
 
-<!-- For minification, comment out this file -->
-<script type="text/javascript" src="js/libs/jquery.mobile-1.4.2.js"></script>
-<!-- For minification, uncomment out this file -->
-<!--<script type="text/javascript" src="js/libs/jquery.mobile-1.4.2.min.js"></script>-->
+<link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
 
-</head>
-<body>
-	<div id="container">
-		<section>
-			<article id="home" data-role="page" data-title="Home">
-				<!-- Header -->
-				<div data-role="header" class="header">
-					<h3>Quanto tempo aguenta o Binas no próximo emprego?</h3>
-				</div>
-				<!-- /Header -->
+<link href="css/template.css" rel="stylesheet">
 
-				<div class="ui-content" role="main">
-					<div class="wrap">
-						<div class="container ui-content">
-							<img src="img/binassuperman.jpg" class="container mobileicon" />
-						</div>
-					</div>
-					<div class="ui-field-contain"></div>
-					<div class="ui-content">
-						<div id="clock" class="clock"></div>
-					</div>
+<!-- full calendar -->
+<link href='bower_components/fullcalendar/fullcalendar.css'
+	rel='stylesheet'>
+<link href='bower_components/fullcalendar/fullcalendar.print.css'
+	rel='stylesheet' media='print'>
+<link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
+<link href='bower_components/colorbox/example3/colorbox.css'
+	rel='stylesheet'>
+<link href='bower_components/responsive-tables/responsive-tables.css'
+	rel='stylesheet'>
+<link
+	href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css'
+	rel='stylesheet'>
+<link href='css/jquery.noty.css' rel='stylesheet'>
+<link href='css/noty_theme_default.css' rel='stylesheet'>
+<link href='css/elfinder.min.css' rel='stylesheet'>
+<link href='css/elfinder.theme.css' rel='stylesheet'>
+<link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+<link href='css/uploadify.css' rel='stylesheet'>
+<link href='css/animate.min.css' rel='stylesheet'>
+<link href="css/flipclock.css" rel='stylesheet'>
+<link
+	href="bower_components/bootstrap-slider/dist/css/bootstrap-slider.min.css"
+	rel='stylesheet'>
 
-				</div>
-				<div data-role="footer" data-position="fixed">
-					        
-					<div data-role="navbar">
-						            
-						<ul>
-							<li><a href="#home" data-icon="home" class="ui-btn-active"
-								data-transition="slide">Countdown</a></li>
-							<li><a href="#bet" data-icon="star" data-transition="slide">Bets</a></li>
-							<li><a href="#list" data-icon="gear" data-transition="slide">List
-									of Bets</a></li>
-						</ul>
-						        
-					</div>
-					<!-- /navbar -->
-				</div>
-				<!-- /footer -->
-			</article>
-			<article id="bet" data-role="page" data-title="Bet">
-				<!-- Header -->
-				<div data-role="header" class="header">
-					<h3>Faz já a tua aposta!</h3>
-				</div>
-				<!-- /Header -->
 
-				<div class="ui-content" role="main">
-					<h2>Aposta minima: 2€</h2>
+<!-- jQuery -->
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+<script src="bower_components/jquery/jquery.min.js"></script>
 
-					<div data-role="fieldcontain">
-						<label for="select-choice-1" class="select">Aposta:</label> <input
-							type="range" name="slider-1" id="slider-1" value="5" min="2"
-							max="20" />
-					</div>
-					<div data-role="fieldcontain">
-						<fieldset data-role="controlgroup" data-type="horizontal">
-							<legend>Data em que o Binas oficializa despedimento:</legend>
+<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-							<label for="select-choice-month">Dia</label> <select
-								name="select-choice-month" id="select-choice-month">
-								<option>Dia</option>
-								<option value="1">1</option>
-								<!-- etc. -->
-							</select> <label for="select-choice-day">Day</label> <select
-								name="select-choice-day" id="select-choice-day">
-								<option>Day</option>
-								<option value="1">1</option>
-								<!-- etc. -->
-							</select> <label for="select-choice-year">Year</label> <select
-								name="select-choice-year" id="select-choice-year">
-								<option>Year</option>
-								<option value="2011">2011</option>
-								<!-- etc. -->
-							</select>
-						</fieldset>
-					</div>
-				</div>
-				     
-				<div data-role="footer" data-position="fixed">
-					        
-					<div data-role="navbar">
-						            
-						<ul>
-							<li><a href="#home" data-icon="home" data-transition="slide">Countdown</a></li>
-							<li><a href="#bet" data-icon="star" class="ui-btn-active"
-								data-transition="slide">Bets</a></li>
-							<li><a href="#list" data-icon="gear" data-transition="slide">List
-									of Bets</a></li>
-						</ul>
-						        
-					</div>
-					<!-- /navbar -->
-				</div>
-				<!-- /footer -->
-			</article>
-			<article id="list" data-role="page" data-title="List">
-				<!-- Header -->
-				<div data-role="header" class="header">
-					<h3>Vê aqui todas as apostas</h3>
-				</div>
-				<!-- /Header -->
-				<div class="ui-content" role="main"></div>
-				<div data-role="footer" data-position="fixed">
-					        
-					<div data-role="navbar">
-						            
-						<ul>
-							<li><a href="#home" data-icon="home" data-transition="slide">Countdown</a></li>
-							<li><a href="#bet" data-icon="star" 
-								data-transition="slide">Bets</a></li>
-							<li><a href="#list" data-icon="gear" class="ui-btn-active" data-transition="slide">List
-									of Bets</a></li>
-						</ul>
-						        
-					</div>
-					<!-- /navbar -->
-				</div>
-				<!-- /footer -->
-			</article>
-		</section>
-	</div>
+<!-- The fav icon -->
+<link rel="shortcut icon" href="img/favicon.ico">
 
-	<script src="js/flipclock.min.js"></script>
-	<script type="text/javascript">
+<!-- external javascript -->
+
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+
+<!-- data table plugin -->
+<script src='js/jquery.dataTables.min.js'></script>
+<!-- slider plugin -->
+<script
+	src="bower_components/bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+<!-- select or dropdown enhancer -->
+<script src="bower_components/chosen/chosen.jquery.min.js"></script>
+<!-- plugin for gallery image view -->
+<script src="bower_components/colorbox/jquery.colorbox-min.js"></script>
+<!-- notification plugin -->
+<script src="js/jquery.noty.js"></script>
+<!-- library for making tables responsive -->
+<script src="bower_components/responsive-tables/responsive-tables.js"></script>
+<!-- tour plugin -->
+<script
+	src="bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+<!-- star rating plugin -->
+<script src="js/jquery.raty.min.js"></script>
+<!-- for iOS style toggle switch -->
+<script src="js/jquery.iphone.toggle.js"></script>
+<!-- autogrowing textarea plugin -->
+<script src="js/jquery.autogrow-textarea.js"></script>
+<!-- multiple file upload plugin -->
+<script src="js/jquery.uploadify-3.1.min.js"></script>
+<!-- history.js for cross-browser state change on ajax -->
+<script src="js/jquery.history.js"></script>
+<!-- calender plugin -->
+<script src='bower_components/moment/min/moment.min.js'></script>
+<script src='bower_components/moment/min/moment-with-langs.min.js'></script>
+<script
+	src='http://fullcalendar.io/js/fullcalendar-2.3.1/lib/moment.min.js'></script>
+<script
+	src="http://fullcalendar.io/js/fullcalendar-2.3.1/lib/jquery-ui.custom.min.js"></script>
+<script
+	src='http://fullcalendar.io/js/fullcalendar-2.3.1/fullcalendar.min.js'></script>
+
+<!-- library for cookie management -->
+<script src="js/jquery.cookie.js"></script>
+<script src="js/libs/jquery.ui.touch-punch.min.js"></script>
+<!-- countdown script -->
+<script src="js/libs/flipclock.min.js"></script>
+<!-- application script for template -->
+<script src="js/template.js"></script>
+<!-- application script -->
+<script src="js/myapp.js"></script>
+
+<script type="text/javascript">
 	
 	$(document).ready(function() {
-		
+
 		var clock;
+		var today
 		var now = new Date().getTime();
 		var before =  new Date("April 16, 2015 09:00:00").getTime();		
 		var diff = now/1000 - before/1000;
 		      clock = $("#clock").FlipClock(diff,{
 		    clockFace: 'DailyCounter'
 		  }); 
+		      $("#topbar").show();
+			  $("#container-home").show();
+				   // page is now ready, initialize the calendar...
+			  $('#calendar').fullCalendar({
+					header : {
+						left : 'prev,next',
+						center : 'title',
+						right : 'today'
+					},
+					defaultDate : 'today',
+					editable : true,
+					eventLimit : true,
+					dayClick : function(date, jsEvent, view) {
+						if ($(this).css('background-color', 'red')){
+
+							}else{
+								$(this).css('background-color', 'white');
+								}
+						// change the day's background color just for fun
+						
+
+					},
+					
+				});		  
 	});
+
+	
+	</script>
+</head>
+<body>
+	<!-- topbar starts -->
+	<div class="navbar navbar-default" id="topbar" role="navigation"
+		style="display: none;">
+
+		<div class="navbar-inner">
+			<button type="button" class="navbar-toggle pull-left animated flip">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+
+			<ul class="collapse navbar-collapse nav navbar-nav top-menu">
+				<li><a href="#Home" id="homeBtn"><i
+						class="glyphicon glyphicon-home"></i> Countdown</a></li>
+				<li><a href="#Bet" id="betBtn"><i
+						class="glyphicon glyphicon-pencil"></i> Registo de Aposta</a></li>
+				<li><a href="#List" id="listBtn"><i
+						class="glyphicon glyphicon-list"></i> Lista de Apostas</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<section>
+		<article id="home" data-role="page" data-title="Home">
+			<div class="ch-container" id="container-home" style="display: none;">
+				<div class="row">
+
+					<noscript>
+						<div class="alert alert-block col-md-12">
+							<h4 class="alert-heading">Warning!</h4>
+
+							<p>
+								You need to have <a
+									href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+								enabled to use this site.
+							</p>
+						</div>
+					</noscript>
+
+					<div id="content" class="col-lg-10 col-sm-10">
+						<div class="row">
+							<div class="box col-md-12">
+
+								<div class="box-inner">
+									<div class="box-header well">
+										<h2>
+											<i class="glyphicon glyphicon-info-sign"></i> Quanto tempo
+											aguenta o Binas no próximo emprego?
+										</h2>
+
+									</div>
+								</div>
+								<div class="box-content row">
+									<div class="center"
+										style="height: 400px; width: 400px; padding: 0px; position: relative; background-color: rgb(247, 30, 228); border: 1px solid #761871; border-radius: 3px; -webkit-border-radius: 3px; -webkit-box-shadow: 0 0 10px rgba(206, 12, 211, 0.4);">
+										<img id="image-1" alt="Querubim" src="img/binassuperman.jpg"
+											style="padding: 30px; border-radius: 50%;" />
+									</div>
+								</div>
+								<div class="box-content row">
+									<div class="center"
+										style="height: 200px; width: 800px; padding: 0px; position: relative;">
+										<div id="clock" class="clock"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article id="Bet" data-role="page" data-title="Bet">
+			<div class="ch-container" id="container-bet" style="display: none;">
+				<div class="row">
+
+					<noscript>
+						<div class="alert alert-block col-md-12">
+							<h4 class="alert-heading">Warning!</h4>
+
+							<p>
+								You need to have <a
+									href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+								enabled to use this site.
+							</p>
+						</div>
+					</noscript>
+
+					<div id="content" class="col-lg-10 col-sm-10">
+						<div class="row">
+							<div class="box col-md-12">
+								<div class="box-inner">
+
+									<div class="box-header well">
+										<h2>
+											<i class="glyphicon glyphicon-info-sign"></i> Faz já a tua
+											aposta!
+										</h2>
+									</div>
+								</div>
+							</div>
+							<div class="box col-md-3">
+								<div class="box-inner homepage-box">
+									<div class="box-header well" data-original-title="">
+										<h2>
+											<i class="glyphicon glyphicon-list-alt"></i> Calendar
+										</h2>
+
+										<div class="box-icon">
+											<a href="#" class="btn btn-minimize btn-round btn-default"><i
+												class="glyphicon glyphicon-chevron-up"></i></a> <a href="#"
+												class="btn btn-close btn-round btn-default"><i
+												class="glyphicon glyphicon-remove"></i></a>
+										</div>
+									</div>
+									<div class="box-content">
+										<div id='calendar'></div>
+										<div class="clearfix"></div>
+									</div>
+
+								</div>
+							</div>
+							<div class="box col-md-6">
+								<div class="box-inner">
+
+									<div class="box-header well" data-original-title="">
+										<h2>
+											<i class="glyphicon glyphicon-pencil"></i> Registe a sua
+											aposta:
+										</h2>
+									</div>
+								</div>
+								<div class="box-content">
+									<!-- For now mapping bean validation constraints from server side model is a manual task -->
+									<form name="reg" id="reg" data-ajax="false">
+										<fieldset>
+											<div class="form-group has-feedback">
+												<label class="control-label" for="betInput">Aposta:</label>
+												<input type="text" class="form-control" id="betInput">
+												<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+											</div>
+
+											<div class="form-group has-feedback">
+												<label class="control-label" for="nomeInput">Nome:</label> <input
+													type="text" class="form-control" id="emailInput"> <span
+													class="glyphicon glyphicon-ok form-control-feedback"></span>
+											</div>
+											<div class="form-group has-feedback">
+												<label class="control-label" for="betValueInput">$$$$
+													&nbsp; </label> <input id="betValueInput" type="text"
+													data-slider-min="2" data-slider-max="20"
+													data-slider-step="1" data-slider-value="10"><span
+													id="currentSliderValLabel"> &nbsp; Valor da aposta:
+													<span id="sliderVal">10 €</span>
+												</span>
+											</div>
+											<div id="formMsgs"></div>
+											<div data-role="controlgroup" data-type="horizontal">
+												<button type="submit" class="btn btn-success noty"
+													data-noty-options="{&quot;text&quot;:&quot;Sucesso&quot;,&quot;layout&quot;:&quot;topRight&quot;,&quot;type&quot;:&quot;success&quot;}">
+													<i class="glyphicon glyphicon-plane"></i> Registe já!
+												</button>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article id="list" data-role="page" data-title="Bet List">
+			<div class="ch-container" id="container" style="display: none;">
+				<div class="row">
+
+					<noscript>
+						<div class="alert alert-block col-md-12">
+							<h4 class="alert-heading">Warning!</h4>
+
+							<p>
+								You need to have <a
+									href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+								enabled to use this site.
+							</p>
+						</div>
+					</noscript>
+
+					<div id="content" class="col-lg-10 col-sm-10">
+						<div class="row">
+							<div class="box col-md-12">
+								<div class="box-inner">
+									<div class="box-header well">
+										<h2>
+											<i class="glyphicon glyphicon-info-sign"></i>Resultado de
+											todas as apostas até ao momento.
+										</h2>
+										<div class="box-content row"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+	</section>
+	<script type="text/javascript">
+
+	document.getElementById("homeBtn").onclick = function() {ableHome()};
+	document.getElementById("betBtn").onclick = function() {
+		ableBet(); 
+		$('#calendar').fullCalendar('today');
+		};
+	document.getElementById("listBtn").onclick = function() {ableList()};
+	function ableHome() {
+		$("#container-home").show();
+		$("#container-bet").hide();
+		$("#container-list").hide();
+	}
+	function ableBet() {
+		$("#container-home").hide();
+		$("#container-bet").show();
+		$("#container-list").hide();
+	}
+	function ableList() {
+		$("#container-home").hide();
+		$("#container-bet").hide();
+		$("#container-list").show();
+	}
+	$("#betValueInput").slider();
+	$("#betValueInput").on("slide", function(slideEvt) {
+		$("#sliderVal").text(slideEvt.value + " €");
+	});
+
+	
 	</script>
 </body>
 </html>
