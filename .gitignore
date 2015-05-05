@@ -1,1 +1,7 @@
 /target/
+/.cheatsheet.xml
+/.classpath
+/.project
+/.teeproject
+/.tern-project
+/SERVICES.md
