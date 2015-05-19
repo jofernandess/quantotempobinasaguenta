@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.bet.football.mybetleague.rest;
+package org.bet.binas.rest;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -28,10 +28,10 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import org.bet.football.mybetleague.data.BetRepository;
-import org.bet.football.mybetleague.model.Betlist;
-import org.bet.football.mybetleague.service.user.UserManagement;
-import org.bet.football.mybetleague.util.Security;
+import org.bet.binas.data.BetRepository;
+import org.bet.binas.model.Betlist;
+import org.bet.binas.service.user.UserManagement;
+import org.bet.binas.util.Security;
 
 /**
  * JAX-RS Example

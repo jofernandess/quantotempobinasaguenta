@@ -1,4 +1,4 @@
-package org.bet.football.mybetleague.model;
+package org.bet.binas.model;
 
 import java.io.Serializable;
 

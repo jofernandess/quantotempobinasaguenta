@@ -1,4 +1,4 @@
-package org.bet.football.mybetleague.util;
+package org.bet.binas.util;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

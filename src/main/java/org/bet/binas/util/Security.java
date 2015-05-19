@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.bet.football.mybetleague.util;
+package org.bet.binas.util;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;

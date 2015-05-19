@@ -1,5 +1,5 @@
 
-package org.bet.football.mybetleague.service.user;
+package org.bet.binas.service.user;
 
 import java.util.logging.Logger;
 
@@ -8,7 +8,7 @@ import javax.enterprise.event.Event;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
-import org.bet.football.mybetleague.model.Betlist;
+import org.bet.binas.model.Betlist;
 
 // The @Stateless annotation eliminates the need for manual transaction demarcation
 @Stateless
